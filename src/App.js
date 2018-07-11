@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import './App.css';
 //ボードの定数
 const EMPTY = 0;
@@ -30,14 +29,12 @@ class Board extends Component {
 
     if(this.canPut(point[0], point[1])){
       this.put(point[0], point[1]);
-      // this.judge();
     }else{
-
+      window.alert("置けません");
     }
   }
 
   canPut = (y, x) => {
-    // console.log(y, x);
     if(this.state.boardInfo[y][x] === EMPTY){
       return true;
     }
